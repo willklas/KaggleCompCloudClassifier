@@ -1,0 +1,12 @@
+# Ignore images
+*.png
+*.jpg
+# Ignore models (wights and structures)
+*.h5
+*.json
+# Ignore submissions
+submissions/*.csv
+# Ignore compressed files
+*.zip
+# Too big for 100mb git limit
+input/train.csv
