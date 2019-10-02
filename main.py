@@ -186,13 +186,13 @@ def main(model_name):
         for i in range(tmp.shape[-1]):
             pred_rle.append(mask2rle(tmp[:,:,i]))
 
-    print(len(pred_rle))
+    # print(len(pred_rle))
 
-    # show results of prediction
-    fig, axs = plt.subplots(5, figsize=(20, 20))
-    axs[0].imshow(cv2.resize(plt.imread(test_images_paths[0]),(525, 350)))
-    for i in range(4):
-        axs[i+1].imshow(rle2mask(pred_rle[i], img.shape))
+    # show results of prediction (not currently working)
+    # fig, axs = plt.subplots(5, figsize=(20, 20))
+    # axs[0].imshow(cv2.resize(plt.imread(test_images_paths[0]),(525, 350)))
+    # for i in range(4):
+    #     axs[i+1].imshow(rle2mask(pred_rle[i], img.shape))
 
     # create submission file
     sub = pd.read_csv('sample_submission.csv', converters={'EncodedPixels': lambda e: ' '} )
